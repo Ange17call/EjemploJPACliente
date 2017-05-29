@@ -1,0 +1,41 @@
+<f:view xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<h:head>
+		<title>Index</title>
+	</h:head>
+
+	<h:body>
+		<h:form >
+			<h:outputLabel for="id" value="ID"/>
+			<h:inputText id="id" value="#{beanJSF.id}" required="true"  requiredMessage="Escriba un nombre"/>
+			<h:message for="id" style="color:red"/><br/><br/>
+			
+			<h:outputLabel for="nombre" value="NOMBRE"/>
+			<h:inputText id="nombre" value="#{beanJSF.nombre}" required="true"  requiredMessage="Escriba un nombre"/>
+			<h:message for="nombre" style="color:red"/><br/><br/>
+			
+			<h:outputLabel for="calle1" value="CALLEPRIMARIA"/>
+			<h:inputText id="calle1" value="#{beanJSF.calleprimaria}" required="true"  requiredMessage="Escriba la calle primaria"/>
+			<h:message  for="calle1" style="color:red"/><br/><br/>
+			
+			<h:outputLabel for="calle2" value="CALLESECUNDARIA" />
+			<h:inputText id="calle2" value="#{beanJSF.callesecundaria}" required="true"  requiredMessage="Escriba la calle secundaria"/>
+			<h:message for="calle2" style="color:red"/><br/><br/>
+			
+			<h:outputLabel for="numerocasa" value="NUMERO CASA"/>
+			<h:inputText id="numerocasa" value="#{beanJSF.numero}" required="true"  requiredMessage="Escriba numero de casa"/>
+			<h:message for="numerocasa" style="color:red"/><br/><br/>
+			
+			<h:outputLabel for="telefono" value="TELEFONO"/>
+			<h:inputText id="telefono" value="#{beanJSF.telefono}" required="true"  requiredMessage="Escriba telefono"/>
+			<h:message for="telefono" style="color:red"/><br/><br/>
+			<br />
+			<br />
+			<h:commandButton type="submit" value="GRABAR" action="#{beanJSF.confActualizar}"  />
+			<h:commandButton type="submit" value="REGRESAR" action="index"  />
+			
+		</h:form>
+	</h:body>
+
+</f:view>

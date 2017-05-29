@@ -1,0 +1,54 @@
+<f:view xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<h:head>
+		<title>Index</title>
+	</h:head>
+
+	<h:body>
+		<h:form>
+		 	<h:dataTable value="#{beanJSF.personaModel}" var="u" border="1">
+		 		
+				<h:column>
+					<f:facet name="header">
+            			<h:outputText value="ID"></h:outputText>
+         			</f:facet>
+					#{u.getId()}
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+            			<h:outputText value="NOMBRE"></h:outputText>
+         			</f:facet>
+					#{u.getNombre()}
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+            			<h:outputText value="CALLE PRIMARIA"></h:outputText>
+         			</f:facet>
+					#{u.getDireccion().getCalleprimaria()}
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+            			<h:outputText value="CALLE SECUNDARIA"></h:outputText>
+         			</f:facet>
+					#{u.getDireccion().getCallesecundaria()}
+				</h:column>
+				<h:column>
+				<f:facet name="header">
+            			<h:outputText value="NUMERO CASA"></h:outputText>
+         			</f:facet>
+					#{u.getDireccion().getNumero()}
+				</h:column>
+				<h:column>
+				<f:facet name="header">
+            			<h:outputText value="TELEFONO"></h:outputText>
+         			</f:facet>
+					#{u.getTelefono()}
+				</h:column>
+			</h:dataTable>
+			<h:commandLink value="Nuevo Usuario" action="nuevo"/>
+			<h:commandLink type="submit" value="Actualizar Usuario" action="#{beanJSF.actualizarBean}"/>
+		</h:form> 
+	</h:body>
+
+</f:view>
